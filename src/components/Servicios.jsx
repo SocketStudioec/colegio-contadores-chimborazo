@@ -56,10 +56,10 @@ export default function Servicios() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <div className="flex items-center gap-2 mb-5">
-              <div className="w-6 h-[2px] bg-copper-400" />
-              <span className="text-xs font-mono text-copper-500 uppercase tracking-[0.18em]">Nuestros servicios</span>
+              <div className="w-6 h-[2px] bg-gold-400" />
+              <span className="text-xs font-mono text-gold-500 uppercase tracking-[0.18em]">Nuestros servicios</span>
             </div>
-            <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-forest-800 leading-tight tracking-[-0.02em]">
+            <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-navy-800 leading-tight tracking-[-0.02em]">
               Todo lo que necesitas<br />
               <em className="font-medium not-italic">para ejercer con excelencia</em>
             </h2>
@@ -69,7 +69,7 @@ export default function Servicios() {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-forest-500 text-base max-w-xs lg:text-right leading-relaxed hidden lg:block"
+            className="text-navy-400 text-base max-w-xs lg:text-right leading-relaxed hidden lg:block"
           >
             Servicios diseñados para acompañar al profesional
             contable en cada etapa de su carrera.
@@ -89,17 +89,13 @@ export default function Servicios() {
                 className="bg-cream-100 p-8 group hover:bg-cream-50 transition-colors duration-200"
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div className="w-11 h-11 bg-forest-700/8 rounded-lg flex items-center justify-center group-hover:bg-forest-700/12 transition-colors">
-                    <Icon size={20} className="text-forest-600" strokeWidth={1.5} />
+                  <div className="w-11 h-11 bg-navy-800/8 rounded-lg flex items-center justify-center group-hover:bg-navy-800/12 transition-colors">
+                    <Icon size={20} className="text-navy-700" strokeWidth={1.5} />
                   </div>
-                  <span className="font-mono text-[11px] text-copper-400 tracking-wider">{s.numero}</span>
+                  <span className="font-mono text-[11px] text-gold-500 tracking-wider">{s.numero}</span>
                 </div>
-                <h3 className="font-display text-lg font-medium text-forest-800 mb-3 leading-snug">
-                  {s.titulo}
-                </h3>
-                <p className="text-forest-500 text-sm leading-relaxed">
-                  {s.descripcion}
-                </p>
+                <h3 className="font-display text-lg font-medium text-navy-800 mb-3 leading-snug">{s.titulo}</h3>
+                <p className="text-navy-500 text-sm leading-relaxed">{s.descripcion}</p>
               </motion.article>
             )
           })}
@@ -110,7 +106,7 @@ export default function Servicios() {
           initial={{ opacity: 0, y: 12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 bg-forest-700 rounded-xl"
+          className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 bg-navy-800 rounded-xl"
         >
           <div>
             <p className="text-cream-100 font-medium mb-1">¿Quieres acceder a todos estos beneficios?</p>
@@ -118,7 +114,7 @@ export default function Servicios() {
           </div>
           <button
             onClick={() => document.querySelector('#afiliacion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="flex-shrink-0 px-5 py-2.5 bg-copper-400 hover:bg-copper-500 text-cream-50 text-sm font-medium rounded transition-colors"
+            className="flex-shrink-0 px-5 py-2.5 bg-gold-400 hover:bg-gold-500 text-navy-900 text-sm font-medium rounded transition-colors"
           >
             Proceso de afiliación
           </button>

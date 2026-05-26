@@ -22,16 +22,16 @@ const planes = [
     precio: '$60',
     periodo: 'por año',
     color: 'border-cream-300 bg-cream-50',
-    btnStyle: 'border border-forest-700/30 text-forest-700 hover:bg-forest-700 hover:text-cream-100',
+    btnStyle: 'border border-navy-800/30 text-navy-700 hover:bg-navy-800 hover:text-cream-100',
   },
   {
     nombre: 'Afiliación Adherente',
     descripcion: 'Para estudiantes de últimos ciclos de contabilidad y afines.',
     precio: '$30',
     periodo: 'por año',
-    color: 'border-forest-700 bg-forest-700',
+    color: 'border-navy-800 bg-navy-800',
     dark: true,
-    btnStyle: 'bg-copper-400 hover:bg-copper-500 text-cream-50',
+    btnStyle: 'bg-gold-400 hover:bg-gold-500 text-navy-900 font-semibold',
     badge: 'Recomendado',
   },
 ]
@@ -51,10 +51,10 @@ export default function Beneficios() {
           className="mb-16"
         >
           <div className="flex items-center gap-2 mb-5">
-            <div className="w-6 h-[2px] bg-copper-400" />
-            <span className="text-xs font-mono text-copper-500 uppercase tracking-[0.18em]">Beneficios para afiliados</span>
+            <div className="w-6 h-[2px] bg-gold-400" />
+            <span className="text-xs font-mono text-gold-500 uppercase tracking-[0.18em]">Beneficios para afiliados</span>
           </div>
-          <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-forest-800 leading-tight tracking-[-0.02em]">
+          <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-navy-800 leading-tight tracking-[-0.02em]">
             Todo lo que ganas al<br />
             <em className="font-medium not-italic">formar parte del Colegio</em>
           </h2>
@@ -62,7 +62,7 @@ export default function Beneficios() {
 
         <div className="grid lg:grid-cols-[1fr_480px] gap-16 items-start">
 
-          {/* Lista de beneficios */}
+          {/* Lista */}
           <motion.div
             initial={{ opacity: 0, x: -16 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -77,15 +77,14 @@ export default function Beneficios() {
                   transition={{ duration: 0.4, delay: 0.15 + i * 0.05 }}
                   className="flex items-start gap-3 py-4 border-b border-cream-300"
                 >
-                  <div className="w-5 h-5 rounded-full bg-forest-700/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check size={11} className="text-forest-600" strokeWidth={2.5} />
+                  <div className="w-5 h-5 rounded-full bg-gold-400/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check size={11} className="text-gold-600" strokeWidth={2.5} />
                   </div>
-                  <p className="text-forest-600 text-sm leading-snug">{b}</p>
+                  <p className="text-navy-600 text-sm leading-snug">{b}</p>
                 </motion.div>
               ))}
             </div>
 
-            {/* Photo */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -99,7 +98,7 @@ export default function Beneficios() {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-forest-900/40" />
+              <div className="absolute inset-0 bg-navy-900/50" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <p className="text-cream-200 text-sm font-mono uppercase tracking-wider mb-1">Comunidad profesional</p>
                 <p className="text-cream-100 font-display text-xl font-medium">
@@ -109,13 +108,13 @@ export default function Beneficios() {
             </motion.div>
           </motion.div>
 
-          {/* Planes de afiliación */}
+          {/* Planes */}
           <div className="space-y-4">
             <motion.p
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.15 }}
-              className="text-xs font-mono text-forest-400 uppercase tracking-wider mb-6"
+              className="text-xs font-mono text-navy-400 uppercase tracking-wider mb-6"
             >
               Planes de afiliación
             </motion.p>
@@ -129,26 +128,26 @@ export default function Beneficios() {
                 className={`rounded-2xl border p-8 relative ${p.color}`}
               >
                 {p.badge && (
-                  <div className="absolute -top-3 right-6 flex items-center gap-1.5 px-3 py-1 bg-copper-400 rounded-full">
-                    <Star size={10} className="text-cream-50" fill="currentColor" />
-                    <span className="text-cream-50 text-[11px] font-mono uppercase tracking-wider">{p.badge}</span>
+                  <div className="absolute -top-3 right-6 flex items-center gap-1.5 px-3 py-1 bg-gold-400 rounded-full">
+                    <Star size={10} className="text-navy-900" fill="currentColor" />
+                    <span className="text-navy-900 text-[11px] font-mono uppercase tracking-wider font-semibold">{p.badge}</span>
                   </div>
                 )}
-                <p className={`text-[11px] font-mono uppercase tracking-wider mb-2 ${p.dark ? 'text-cream-400' : 'text-copper-500'}`}>
+                <p className={`text-[11px] font-mono uppercase tracking-wider mb-2 ${p.dark ? 'text-gold-300' : 'text-gold-500'}`}>
                   {p.nombre}
                 </p>
-                <p className={`text-sm leading-relaxed mb-6 ${p.dark ? 'text-cream-300' : 'text-forest-500'}`}>
+                <p className={`text-sm leading-relaxed mb-6 ${p.dark ? 'text-cream-300' : 'text-navy-500'}`}>
                   {p.descripcion}
                 </p>
                 <div className="flex items-baseline gap-2 mb-8">
-                  <span className={`font-display text-4xl font-semibold ${p.dark ? 'text-cream-100' : 'text-forest-800'}`}>
+                  <span className={`font-display text-4xl font-semibold ${p.dark ? 'text-cream-100' : 'text-navy-800'}`}>
                     {p.precio}
                   </span>
-                  <span className={`text-sm ${p.dark ? 'text-cream-400' : 'text-forest-400'}`}>{p.periodo}</span>
+                  <span className={`text-sm ${p.dark ? 'text-cream-400' : 'text-navy-400'}`}>{p.periodo}</span>
                 </div>
                 <button
                   onClick={() => document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })}
-                  className={`w-full py-3 rounded-lg text-sm font-medium transition-colors ${p.btnStyle}`}
+                  className={`w-full py-3 rounded-lg text-sm transition-colors ${p.btnStyle}`}
                 >
                   Solicitar afiliación
                 </button>
@@ -159,7 +158,7 @@ export default function Beneficios() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.45 }}
-              className="text-xs text-forest-400 text-center pt-2"
+              className="text-xs text-navy-400 text-center pt-2"
             >
               La cuota de afiliación incluye todos los beneficios listados.
               <br />Consulta en secretaría por excepciones y convenios vigentes.

@@ -15,30 +15,33 @@
   }
 
   body {
-    @apply bg-cream-200 text-forest-800 font-sans;
+    @apply bg-cream-200 text-navy-800 font-sans;
     margin: 0;
   }
 
   *:focus-visible {
-    @apply outline-none ring-2 ring-copper-400 ring-offset-2;
+    @apply outline-none ring-2 ring-gold-400 ring-offset-2;
   }
 
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { @apply bg-cream-300; }
-  ::-webkit-scrollbar-thumb { @apply bg-copper-400 rounded; }
+  ::-webkit-scrollbar-thumb { @apply bg-gold-400 rounded; }
 }
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
 
-  .shadow-forest {
-    box-shadow: 0 0 0 1px rgba(27,58,45,0.12), 0 4px 20px rgba(27,58,45,0.08);
+  .shadow-navy {
+    box-shadow: 0 0 0 1px rgba(15,21,32,0.12), 0 4px 20px rgba(15,21,32,0.08);
   }
-  .shadow-forest-lg {
-    box-shadow: 0 0 0 1px rgba(27,58,45,0.15), 0 8px 40px rgba(27,58,45,0.12);
+  .shadow-navy-lg {
+    box-shadow: 0 0 0 1px rgba(15,21,32,0.15), 0 8px 40px rgba(15,21,32,0.12);
   }
-  .shadow-copper {
-    box-shadow: 0 0 0 1px rgba(160,97,42,0.2), 0 4px 16px rgba(160,97,42,0.15);
+  .shadow-gold {
+    box-shadow: 0 0 0 1px rgba(200,169,75,0.25), 0 4px 16px rgba(200,169,75,0.15);
+  }
+  .shadow-gold-lg {
+    box-shadow: 0 0 0 1px rgba(200,169,75,0.35), 0 8px 32px rgba(200,169,75,0.2);
   }
 
   .line-clamp-2 {

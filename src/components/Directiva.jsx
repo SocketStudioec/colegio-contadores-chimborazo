@@ -55,10 +55,10 @@ export default function Directiva() {
           className="mb-16"
         >
           <div className="flex items-center gap-2 mb-5">
-            <div className="w-6 h-[2px] bg-copper-400" />
-            <span className="text-xs font-mono text-copper-500 uppercase tracking-[0.18em]">Directiva institucional</span>
+            <div className="w-6 h-[2px] bg-gold-400" />
+            <span className="text-xs font-mono text-gold-500 uppercase tracking-[0.18em]">Directiva institucional</span>
           </div>
-          <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-forest-800 leading-tight tracking-[-0.02em]">
+          <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-navy-800 leading-tight tracking-[-0.02em]">
             Quiénes lideran<br />
             <em className="font-medium not-italic">nuestra institución</em>
           </h2>
@@ -80,21 +80,23 @@ export default function Directiva() {
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
-              <div className="absolute top-4 left-4 px-2.5 py-1 bg-copper-400 rounded text-cream-50 text-[11px] font-mono uppercase tracking-wider">
+              <div className="absolute top-4 left-4 px-2.5 py-1 bg-gold-400 rounded text-navy-900 text-[11px] font-mono uppercase tracking-wider font-semibold">
                 Presidente
               </div>
             </div>
             <div className="p-8">
-              <p className="text-xs font-mono text-copper-500 uppercase tracking-wider mb-2">Presidente del Colegio de Contadores de Chimborazo</p>
-              <h3 className="font-display text-3xl font-medium text-forest-800 mb-4">{m.nombre}</h3>
-              <p className="text-forest-500 leading-relaxed text-sm mb-6">
+              <p className="text-xs font-mono text-gold-500 uppercase tracking-wider mb-2">
+                Presidente del Colegio de Contadores de Chimborazo
+              </p>
+              <h3 className="font-display text-3xl font-medium text-navy-800 mb-4">{m.nombre}</h3>
+              <p className="text-navy-500 leading-relaxed text-sm mb-6">
                 Profesional de la contabilidad con amplia trayectoria en el ejercicio contable y la gestión gremial
                 en la provincia de Chimborazo. Comprometido con el fortalecimiento institucional y la defensa
                 de los derechos de los contadores chimboracenses.
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-[2px] bg-copper-300" />
-                <span className="text-xs text-forest-400 font-mono">Período de gestión 2023–2026</span>
+                <div className="w-8 h-[2px] bg-gold-300" />
+                <span className="text-xs text-navy-400 font-mono">Período de gestión 2023–2026</span>
               </div>
             </div>
           </motion.div>
@@ -117,10 +119,10 @@ export default function Directiva() {
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-forest-900/0 group-hover:bg-forest-900/20 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-colors duration-300" />
               </div>
-              <p className="text-[11px] font-mono text-copper-500 uppercase tracking-wider mb-0.5">{m.cargo}</p>
-              <h4 className="font-display text-base font-medium text-forest-800 leading-snug">{m.nombre}</h4>
+              <p className="text-[11px] font-mono text-gold-500 uppercase tracking-wider mb-0.5">{m.cargo}</p>
+              <h4 className="font-display text-base font-medium text-navy-800 leading-snug">{m.nombre}</h4>
             </motion.article>
           ))}
         </div>

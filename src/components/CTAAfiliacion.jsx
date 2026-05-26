@@ -33,7 +33,7 @@ export default function CTAAfiliacion() {
   const { ref, inView } = useInView(0.08)
 
   return (
-    <section id="afiliacion" className="py-24 bg-forest-700" ref={ref}>
+    <section id="afiliacion" className="py-24 bg-navy-800" ref={ref}>
       <div className="max-w-content mx-auto px-6">
 
         {/* Header */}
@@ -44,8 +44,8 @@ export default function CTAAfiliacion() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <div className="flex items-center gap-2 mb-5">
-              <div className="w-6 h-[2px] bg-copper-400" />
-              <span className="text-xs font-mono text-copper-400 uppercase tracking-[0.18em]">Proceso de afiliación</span>
+              <div className="w-6 h-[2px] bg-gold-400" />
+              <span className="text-xs font-mono text-gold-400 uppercase tracking-[0.18em]">Proceso de afiliación</span>
             </div>
             <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-cream-100 leading-tight tracking-[-0.02em]">
               Cuatro pasos para ser<br />
@@ -67,7 +67,7 @@ export default function CTAAfiliacion() {
         </div>
 
         {/* Pasos */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-forest-500/40 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-navy-600/40 mb-16">
           {pasos.map((p, i) => {
             const Icon = p.icon
             return (
@@ -76,13 +76,13 @@ export default function CTAAfiliacion() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
-                className="bg-forest-700 p-8"
+                className="bg-navy-800 p-8"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-10 h-10 bg-forest-600 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-navy-700 rounded-lg flex items-center justify-center">
                     <Icon size={18} className="text-cream-200" strokeWidth={1.5} />
                   </div>
-                  <span className="font-mono text-[11px] text-copper-400 tracking-wider">{p.numero}</span>
+                  <span className="font-mono text-[11px] text-gold-400 tracking-wider">{p.numero}</span>
                 </div>
                 <h3 className="font-display text-lg font-medium text-cream-100 mb-2 leading-snug">{p.titulo}</h3>
                 <p className="text-cream-400 text-sm leading-relaxed">{p.desc}</p>
@@ -99,26 +99,23 @@ export default function CTAAfiliacion() {
           className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-8 bg-cream-200 rounded-2xl"
         >
           <div>
-            <p className="font-display text-2xl font-medium text-forest-800 mb-1">
-              ¿Listo para afiliarte?
-            </p>
-            <p className="text-forest-500 text-sm">
+            <p className="font-display text-2xl font-medium text-navy-800 mb-1">¿Listo para afiliarte?</p>
+            <p className="text-navy-500 text-sm">
               Visítanos en Virgilio Corral y José María Banderas, Urb. Las Retamas, Riobamba.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
             <a
               href="tel:032306007"
-              className="px-5 py-3 border border-forest-700/30 text-forest-700 text-sm font-medium rounded transition-colors hover:bg-forest-700/5 text-center"
+              className="px-5 py-3 border border-navy-800/30 text-navy-700 text-sm font-medium rounded hover:bg-navy-800/5 transition-colors text-center"
             >
               Llamar: 03-2306007
             </a>
             <button
               onClick={() => document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex items-center justify-center gap-2 px-5 py-3 bg-forest-700 hover:bg-forest-800 text-cream-100 text-sm font-medium rounded transition-colors"
+              className="flex items-center justify-center gap-2 px-5 py-3 bg-navy-800 hover:bg-navy-900 text-cream-100 text-sm font-medium rounded transition-colors"
             >
-              Escribirnos
-              <ArrowRight size={15} />
+              Escribirnos <ArrowRight size={15} />
             </button>
           </div>
         </motion.div>

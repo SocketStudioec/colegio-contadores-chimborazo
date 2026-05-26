@@ -56,7 +56,7 @@ export default function SobreNosotros() {
   const current = tabs.find(t => t.id === activeTab)
 
   return (
-    <section id="nosotros" className="py-24 bg-forest-700" ref={ref}>
+    <section id="nosotros" className="py-24 bg-navy-800" ref={ref}>
       <div className="max-w-content mx-auto px-6">
 
         {/* Section header */}
@@ -67,8 +67,8 @@ export default function SobreNosotros() {
           className="mb-16"
         >
           <div className="flex items-center gap-2 mb-5">
-            <div className="w-6 h-[2px] bg-copper-400" />
-            <span className="text-xs font-mono text-copper-400 uppercase tracking-[0.18em]">Quiénes somos</span>
+            <div className="w-6 h-[2px] bg-gold-400" />
+            <span className="text-xs font-mono text-gold-400 uppercase tracking-[0.18em]">Quiénes somos</span>
           </div>
           <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-cream-100 leading-tight tracking-[-0.02em]">
             Una institución al servicio<br />
@@ -76,7 +76,7 @@ export default function SobreNosotros() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-[320px_1fr] gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-[300px_1fr] gap-12 lg:gap-16 items-start">
 
           {/* Tab navigation */}
           <motion.div
@@ -91,14 +91,14 @@ export default function SobreNosotros() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`text-left px-5 py-3.5 rounded font-medium text-sm transition-colors relative ${
                     activeTab === tab.id
-                      ? 'bg-cream-200 text-forest-800'
-                      : 'text-cream-300 hover:text-cream-100 hover:bg-forest-600'
+                      ? 'bg-cream-200 text-navy-800'
+                      : 'text-cream-300 hover:text-cream-100 hover:bg-navy-700'
                   }`}
                 >
                   {activeTab === tab.id && (
                     <motion.div
                       layoutId="tabIndicator"
-                      className="absolute left-0 top-2 bottom-2 w-0.5 bg-copper-400 rounded-full"
+                      className="absolute left-0 top-2 bottom-2 w-0.5 bg-gold-400 rounded-full"
                     />
                   )}
                   <span className="pl-2">{tab.label}</span>
@@ -132,26 +132,23 @@ export default function SobreNosotros() {
               </h3>
               <div className="space-y-4">
                 {current.content.body.split('\n\n').map((para, i) => (
-                  <p key={i} className="text-cream-300 leading-relaxed">
-                    {para}
-                  </p>
+                  <p key={i} className="text-cream-300 leading-relaxed">{para}</p>
                 ))}
               </div>
 
-              {/* Pull quote */}
               {activeTab === 'historia' && (
                 <motion.blockquote
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="mt-10 pl-6 border-l-2 border-copper-400"
+                  className="mt-10 pl-6 border-l-2 border-gold-400"
                 >
                   <p className="font-display text-xl italic text-cream-200 leading-snug mb-3">
                     "Trabajamos cada día para que el contador chimboracense
                     sea reconocido por su excelencia profesional."
                   </p>
                   <footer className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-forest-500 flex-shrink-0 overflow-hidden">
+                    <div className="w-8 h-8 rounded-full bg-navy-600 flex-shrink-0 overflow-hidden">
                       <img
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&q=80&fit=crop&crop=faces"
                         alt="Jhonny Coronel"

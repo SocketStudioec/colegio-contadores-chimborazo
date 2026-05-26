@@ -38,10 +38,10 @@ const noticias = [
 ]
 
 const categoriaStyle = {
-  'Institucional': 'text-forest-600',
-  'Tributación': 'text-copper-600',
-  'Capacitación': 'text-blue-600',
-  'Gremial': 'text-amber-700',
+  'Institucional': 'text-navy-600',
+  'Tributación':   'text-gold-600',
+  'Capacitación':  'text-blue-600',
+  'Gremial':       'text-amber-700',
 }
 
 export default function Noticias() {
@@ -62,10 +62,10 @@ export default function Noticias() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <div className="flex items-center gap-2 mb-5">
-              <div className="w-6 h-[2px] bg-copper-400" />
-              <span className="text-xs font-mono text-copper-500 uppercase tracking-[0.18em]">Noticias gremiales</span>
+              <div className="w-6 h-[2px] bg-gold-400" />
+              <span className="text-xs font-mono text-gold-500 uppercase tracking-[0.18em]">Noticias gremiales</span>
             </div>
-            <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-forest-800 leading-tight tracking-[-0.02em]">
+            <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-navy-800 leading-tight tracking-[-0.02em]">
               Al día con la<br />
               <em className="font-medium not-italic">vida institucional</em>
             </h2>
@@ -75,10 +75,9 @@ export default function Noticias() {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="hidden md:flex items-center gap-2 text-sm text-forest-600 hover:text-forest-700 font-medium flex-shrink-0"
+            className="hidden md:flex items-center gap-2 text-sm text-navy-600 hover:text-navy-700 font-medium flex-shrink-0"
           >
-            Todas las noticias
-            <ArrowUpRight size={15} />
+            Todas las noticias <ArrowUpRight size={15} />
           </motion.button>
         </div>
 
@@ -105,21 +104,17 @@ export default function Noticias() {
                 <span className={`text-[11px] font-mono uppercase tracking-wider ${categoriaStyle[principal.categoria]}`}>
                   {principal.categoria}
                 </span>
-                <span className="text-cream-500 text-xs">·</span>
-                <span className="text-forest-400 text-xs flex items-center gap-1.5">
-                  <Calendar size={11} />
-                  {principal.fecha}
+                <span className="text-cream-400 text-xs">·</span>
+                <span className="text-navy-400 text-xs flex items-center gap-1.5">
+                  <Calendar size={11} />{principal.fecha}
                 </span>
               </div>
-              <h3 className="font-display text-2xl lg:text-3xl font-medium text-forest-800 leading-tight mb-3 group-hover:text-forest-700 transition-colors text-balance">
+              <h3 className="font-display text-2xl lg:text-3xl font-medium text-navy-800 leading-tight mb-3 group-hover:text-navy-700 transition-colors text-balance">
                 {principal.titulo}
               </h3>
-              <p className="text-forest-500 text-sm leading-relaxed line-clamp-3">
-                {principal.resumen}
-              </p>
-              <div className="mt-4 flex items-center gap-2 text-forest-600 text-sm font-medium">
-                <span>Leer más</span>
-                <ArrowUpRight size={14} />
+              <p className="text-navy-500 text-sm leading-relaxed line-clamp-3">{principal.resumen}</p>
+              <div className="mt-4 flex items-center gap-2 text-navy-600 text-sm font-medium">
+                <span>Leer más</span><ArrowUpRight size={14} />
               </div>
             </motion.article>
           )}
@@ -139,24 +134,14 @@ export default function Noticias() {
                     {n.categoria}
                   </span>
                   <span className="text-cream-400 text-xs">·</span>
-                  <span className="text-forest-400 text-xs">{n.fecha}</span>
+                  <span className="text-navy-400 text-xs">{n.fecha}</span>
                 </div>
-                <h4 className="font-display text-base font-medium text-forest-800 leading-snug mb-2 group-hover:text-forest-700 transition-colors line-clamp-2">
+                <h4 className="font-display text-base font-medium text-navy-800 leading-snug mb-2 group-hover:text-navy-700 transition-colors line-clamp-2">
                   {n.titulo}
                 </h4>
-                <p className="text-forest-400 text-xs leading-relaxed line-clamp-2">
-                  {n.resumen}
-                </p>
+                <p className="text-navy-400 text-xs leading-relaxed line-clamp-2">{n.resumen}</p>
               </motion.article>
             ))}
-
-            {/* CTA más noticias mobile */}
-            <div className="pt-6 md:hidden">
-              <button className="flex items-center gap-2 text-sm text-forest-600 font-medium">
-                Todas las noticias
-                <ArrowUpRight size={14} />
-              </button>
-            </div>
           </div>
         </div>
       </div>

@@ -54,10 +54,10 @@ const cursos = [
 ]
 
 const categoriaColor = {
-  'Tributación': 'bg-copper-100 text-copper-600',
-  'NIIF': 'bg-forest-100 text-forest-600',
-  'Laboral': 'bg-blue-50 text-blue-600',
-  'Auditoría': 'bg-amber-50 text-amber-700',
+  'Tributación': 'bg-gold-100 text-gold-600',
+  'NIIF':        'bg-navy-100 text-navy-600',
+  'Laboral':     'bg-blue-50 text-blue-600',
+  'Auditoría':   'bg-amber-50 text-amber-700',
 }
 
 export default function Capacitacion() {
@@ -75,10 +75,10 @@ export default function Capacitacion() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <div className="flex items-center gap-2 mb-5">
-              <div className="w-6 h-[2px] bg-copper-400" />
-              <span className="text-xs font-mono text-copper-500 uppercase tracking-[0.18em]">Capacitación profesional</span>
+              <div className="w-6 h-[2px] bg-gold-400" />
+              <span className="text-xs font-mono text-gold-500 uppercase tracking-[0.18em]">Capacitación profesional</span>
             </div>
-            <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-forest-800 leading-tight tracking-[-0.02em]">
+            <h2 className="font-display text-[2.6rem] lg:text-[3.2rem] font-light text-navy-800 leading-tight tracking-[-0.02em]">
               Programa de formación<br />
               <em className="font-medium not-italic">segundo semestre 2026</em>
             </h2>
@@ -88,7 +88,7 @@ export default function Capacitacion() {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="hidden lg:flex items-center gap-2 text-sm text-forest-600 hover:text-forest-700 font-medium"
+            className="hidden lg:flex items-center gap-2 text-sm text-navy-600 hover:text-navy-700 font-medium"
           >
             Ver calendario completo
             <ArrowUpRight size={15} />
@@ -108,7 +108,7 @@ export default function Capacitacion() {
               <span className={`inline-block px-2.5 py-1 rounded text-[11px] font-mono uppercase tracking-wider mb-4 ${categoriaColor[c.categoria]}`}>
                 {c.categoria}
               </span>
-              <h3 className="font-display text-2xl lg:text-3xl font-medium text-forest-800 mb-6 leading-tight">
+              <h3 className="font-display text-2xl lg:text-3xl font-medium text-navy-800 mb-6 leading-tight">
                 {c.titulo}
               </h3>
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
@@ -118,27 +118,27 @@ export default function Capacitacion() {
                   { icon: MapPin, text: c.lugar },
                   { icon: Users, text: c.cupos },
                 ].map(({ icon: Icon, text }, j) => (
-                  <div key={j} className="flex items-center gap-2.5 text-sm text-forest-500">
-                    <Icon size={14} className="text-copper-400 flex-shrink-0" />
+                  <div key={j} className="flex items-center gap-2.5 text-sm text-navy-500">
+                    <Icon size={14} className="text-gold-400 flex-shrink-0" />
                     <span>{text}</span>
                   </div>
                 ))}
               </div>
               <div className="flex items-center gap-4">
-                <button className="px-5 py-2.5 bg-forest-700 hover:bg-forest-800 text-cream-100 text-sm font-medium rounded transition-colors">
+                <button className="px-5 py-2.5 bg-navy-800 hover:bg-navy-900 text-cream-100 text-sm font-medium rounded transition-colors">
                   Inscribirme ahora
                 </button>
-                <p className="text-2xl font-display text-forest-700 font-semibold">{c.precio}</p>
+                <p className="text-2xl font-display text-navy-700 font-semibold">{c.precio}</p>
               </div>
             </div>
-            <div className="relative hidden md:block bg-forest-800">
+            <div className="relative hidden md:block bg-navy-800">
               <img
                 src={c.imagen}
                 alt={c.titulo}
-                className="w-full h-full object-cover opacity-70"
+                className="w-full h-full object-cover opacity-60"
                 loading="lazy"
               />
-              <div className="absolute top-6 right-6 px-3 py-1.5 bg-copper-400 rounded text-cream-50 text-xs font-mono uppercase tracking-wider">
+              <div className="absolute top-6 right-6 px-3 py-1.5 bg-gold-400 rounded text-navy-900 text-xs font-mono uppercase tracking-wider font-semibold">
                 Destacado
               </div>
             </div>
@@ -153,22 +153,22 @@ export default function Capacitacion() {
               initial={{ opacity: 0, y: 12 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 + i * 0.07 }}
-              className="flex flex-col sm:flex-row sm:items-center gap-4 p-5 bg-cream-50 border border-cream-300 rounded-xl hover:border-forest-700/20 hover:bg-cream-100 transition-colors group cursor-pointer"
+              className="flex flex-col sm:flex-row sm:items-center gap-4 p-5 bg-cream-50 border border-cream-300 rounded-xl hover:border-navy-800/20 hover:bg-cream-100 transition-colors group cursor-pointer"
             >
               <span className={`self-start sm:self-auto px-2.5 py-1 rounded text-[11px] font-mono uppercase tracking-wider flex-shrink-0 ${categoriaColor[c.categoria]}`}>
                 {c.categoria}
               </span>
               <div className="flex-1 min-w-0">
-                <h4 className="font-medium text-forest-800 text-sm mb-1 group-hover:text-forest-700">{c.titulo}</h4>
-                <div className="flex flex-wrap gap-4 text-xs text-forest-400">
+                <h4 className="font-medium text-navy-800 text-sm mb-1 group-hover:text-navy-700">{c.titulo}</h4>
+                <div className="flex flex-wrap gap-4 text-xs text-navy-400">
                   <span className="flex items-center gap-1"><Calendar size={11} />{c.fecha}</span>
                   <span className="flex items-center gap-1"><Clock size={11} />{c.duracion}</span>
                   <span className="flex items-center gap-1"><MapPin size={11} />{c.modalidad}</span>
                 </div>
               </div>
               <div className="flex items-center gap-4 flex-shrink-0">
-                <p className="font-display text-lg font-semibold text-forest-700">{c.precio}</p>
-                <button className="px-4 py-2 border border-forest-700/30 text-forest-700 text-xs font-medium rounded hover:bg-forest-700 hover:text-cream-100 transition-colors">
+                <p className="font-display text-lg font-semibold text-navy-700">{c.precio}</p>
+                <button className="px-4 py-2 border border-navy-800/30 text-navy-700 text-xs font-medium rounded hover:bg-navy-800 hover:text-cream-100 transition-colors">
                   Inscribirse
                 </button>
               </div>
