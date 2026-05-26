@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-cream-200 text-forest-800 font-sans;
+    margin: 0;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-copper-400 ring-offset-2;
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { @apply bg-cream-300; }
+  ::-webkit-scrollbar-thumb { @apply bg-copper-400 rounded; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .shadow-forest {
+    box-shadow: 0 0 0 1px rgba(27,58,45,0.12), 0 4px 20px rgba(27,58,45,0.08);
+  }
+  .shadow-forest-lg {
+    box-shadow: 0 0 0 1px rgba(27,58,45,0.15), 0 8px 40px rgba(27,58,45,0.12);
+  }
+  .shadow-copper {
+    box-shadow: 0 0 0 1px rgba(160,97,42,0.2), 0 4px 16px rgba(160,97,42,0.15);
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
